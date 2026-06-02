@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spatial Analysis — Francesco Carrer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Rouge-compatible syntax highlighting via highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/atelier-cave-light.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/r.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <style>
+    /* ── Spatial analysis page specific styles ── */
+
+    .sa-intro {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--warm-mid);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Analysis entry card */
+    .analysis-entry {
+      margin-bottom: 4rem;
+    }
+
+    .analysis-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .analysis-number {
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-lt);
+      margin-bottom: 0.4rem;
+    }
+
+    .analysis-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .analysis-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--warm-mid);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Prose within an analysis */
+    .analysis-body p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--warm-mid);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .analysis-body h3 {
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    /* Code blocks */
+    .analysis-body pre {
+      background: var(--off-white);
+      border: 1px solid var(--stone);
+      border-left: 3px solid var(--accent-lt);
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .analysis-body code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.82rem;
+    }
+
+    /* Inline code */
+    .analysis-body p code {
+      background: var(--off-white);
+      border: 1px solid var(--stone);
+      padding: 0.1em 0.4em;
+      font-size: 0.82rem;
+    }
+
+    /* Placeholder box */
+    .placeholder-box {
+      border: 1px dashed var(--stone);
+      padding: 2.5rem;
+      text-align: center;
+      color: var(--warm-mid);
+    }
+
+    .placeholder-box p {
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 0.5rem;
+    }
+
+    .placeholder-box .placeholder-glyph {
+      font-size: 2rem;
+      color: var(--stone);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-rule"></div>
+
+  <nav>
+    <a class="nav-name" href="index.html"><em>Francesco</em> Carrer</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="spatial-analysis.html" class="active">Spatial Analysis</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="slide-up delay-1">
+      <p class="page-eyebrow">Code &amp; Methods</p>
+      <h1 class="page-title"><em>Spatial</em> Analysis</h1>
+    </div>
+
+    <p class="sa-intro slide-up delay-2">
+      R code and workflows used in my archaeological spatial analyses.
+      All code is shared openly — you are welcome to use and adapt it for your own research.
+      If you do, a citation to the relevant publication is appreciated.
+    </p>
+
+    <div class="divider slide-up delay-2">
+      <div class="divider-line"></div>
+      <span class="divider-glyph">✦</span>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         ANALYSIS ENTRY 1 — PLACEHOLDER
+         Replace this section with your R code.
+         Copy the entire <article> block for each
+         additional analysis.
+         ══════════════════════════════════════════ -->
+    <article class="analysis-entry slide-up delay-2">
+      <div class="analysis-header">
+        <p class="analysis-number">Analysis 01</p>
+        <h2 class="analysis-title">Your Analysis Title Here</h2>
+        <p class="analysis-desc">
+          A short description of what this analysis does — e.g. kernel density estimation
+          of site distributions across an upland landscape.
+        </p>
+      </div>
+
+      <div class="analysis-body">
+
+        <!-- Paste your R Markdown content here.
+             Use <h3> for section headers, <p> for prose,
+             and <pre><code class="language-r"> ... </code></pre> for code blocks. -->
+
+        <div class="placeholder-box">
+          <div class="placeholder-glyph">⌨</div>
+          <p>Paste your R code and narrative here</p>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════════
+         ANALYSIS ENTRY 2 — PLACEHOLDER
+         ══════════════════════════════════════════ -->
+    <div class="divider slide-up delay-3">
+      <div class="divider-line"></div>
+      <span class="divider-glyph">✦</span>
+      <div class="divider-line"></div>
+    </div>
+
+    <article class="analysis-entry slide-up delay-3">
+      <div class="analysis-header">
+        <p class="analysis-number">Analysis 02</p>
+        <h2 class="analysis-title">Your Second Analysis Here</h2>
+        <p class="analysis-desc">
+          Description of the second analysis.
+        </p>
+      </div>
+
+      <div class="analysis-body">
+        <div class="placeholder-box">
+          <div class="placeholder-glyph">⌨</div>
+          <p>Paste your R code and narrative here</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Add more <article> blocks as needed, following the same pattern -->
+
+  </main>
+
+  <footer>
+    <span>Francesco Carrer &nbsp;·&nbsp; Newcastle University</span>
+    <a href="https://github.com/francescokar" target="_blank" rel="noopener">github.com/francescokar</a>
+  </footer>
+
+</body>
+</html>

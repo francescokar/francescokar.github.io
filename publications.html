@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Francesco Carrer</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Publications-page specific styles ── */
+
+    .pub-intro {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--warm-mid);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .pub-intro a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-lt);
+      transition: border-color 0.2s;
+    }
+    .pub-intro a:hover { border-color: var(--accent); }
+
+    /* Section headers */
+    .pub-section {
+      margin-top: 3rem;
+    }
+
+    .pub-section-title {
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    /* Year groups */
+    .pub-year-group {
+      margin-bottom: 2rem;
+    }
+
+    .pub-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--accent-lt);
+      margin-bottom: 0.75rem;
+      font-weight: 300;
+    }
+
+    /* Individual publication */
+    .pub-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pub-item {
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--stone);
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink);
+      transition: border-color 0.2s;
+    }
+
+    .pub-item:hover {
+      border-color: var(--accent-lt);
+    }
+
+    .pub-item .pub-authors {
+      color: var(--warm-mid);
+    }
+
+    .pub-item .pub-title {
+      font-style: italic;
+    }
+
+    .pub-item .pub-journal {
+      color: var(--warm-mid);
+    }
+
+    .pub-item a.pub-doi {
+      font-family: 'Tenor Sans', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-lt);
+      margin-left: 0.5rem;
+      transition: border-color 0.2s;
+    }
+    .pub-item a.pub-doi:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <div class="top-rule"></div>
+
+  <nav>
+    <a class="nav-name" href="index.html"><em>Francesco</em> Carrer</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="spatial-analysis.html">Spatial Analysis</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="slide-up delay-1">
+      <p class="page-eyebrow">Research Output</p>
+      <h1 class="page-title"><em>Publications</em></h1>
+    </div>
+
+    <p class="pub-intro slide-up delay-2">
+      A selection of publications is listed below, organised by type and year.
+      For a complete and up-to-date list see my profiles on
+      <a href="#" target="_blank">Google Scholar</a>,
+      <a href="#" target="_blank">ORCID</a>, and
+      <a href="#" target="_blank">ResearchGate</a>.
+      <!-- Replace # with your actual profile URLs -->
+    </p>
+
+    <!-- ══════════════════════════════════════════
+         JOURNAL ARTICLES
+         To add a publication, copy one <li> block
+         and fill in your details.
+         ══════════════════════════════════════════ -->
+    <section class="pub-section slide-up delay-2">
+      <h2 class="pub-section-title">Journal Articles</h2>
+
+      <div class="pub-year-group">
+        <p class="pub-year">2024</p>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-authors">Carrer, F.</span>
+            "<span class="pub-title">Article title here</span>."
+            <span class="pub-journal">Journal Name</span>, Vol(Issue): pages.
+            <a class="pub-doi" href="https://doi.org/XXXXX" target="_blank">DOI ↗</a>
+          </li>
+          <!-- Copy the <li> above for each article in this year -->
+        </ul>
+      </div>
+
+      <div class="pub-year-group">
+        <p class="pub-year">2023</p>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-authors">Carrer, F.</span>
+            "<span class="pub-title">Article title here</span>."
+            <span class="pub-journal">Journal Name</span>, Vol(Issue): pages.
+            <a class="pub-doi" href="https://doi.org/XXXXX" target="_blank">DOI ↗</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Add more year groups as needed -->
+
+    </section>
+
+    <div class="divider slide-up delay-3">
+      <div class="divider-line"></div>
+      <span class="divider-glyph">✦</span>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         BOOK CHAPTERS
+         ══════════════════════════════════════════ -->
+    <section class="pub-section slide-up delay-3">
+      <h2 class="pub-section-title">Book Chapters</h2>
+
+      <div class="pub-year-group">
+        <p class="pub-year">2023</p>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-authors">Carrer, F.</span>
+            "<span class="pub-title">Chapter title here</span>."
+            In <span class="pub-journal">Book Title</span>, edited by Editor Name. Publisher, pages.
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <div class="divider slide-up delay-3">
+      <div class="divider-line"></div>
+      <span class="divider-glyph">✦</span>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         BOOKS
+         ══════════════════════════════════════════ -->
+    <section class="pub-section slide-up delay-4">
+      <h2 class="pub-section-title">Books</h2>
+
+      <div class="pub-year-group">
+        <p class="pub-year">2022</p>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-authors">Carrer, F.</span>
+            <span class="pub-title">Book title here</span>.
+            Publisher.
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Francesco Carrer &nbsp;·&nbsp; Newcastle University</span>
+    <a href="https://github.com/francescokar" target="_blank" rel="noopener">github.com/francescokar</a>
+  </footer>
+
+</body>
+</html>
