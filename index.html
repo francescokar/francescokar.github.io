@@ -6,220 +6,107 @@
   <title>Francesco Carrer — Archaeologist</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── About-page specific styles ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 3rem;
-      align-items: start;
-      margin-top: 2.5rem;
-    }
- 
-    .profile-photo {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border: 1px solid var(--stone);
-      display: block;
-      /* Remove the grey placeholder below once you add your real photo */
-      background: var(--off-white);
-    }
- 
-    .photo-placeholder {
-      width: 200px;
-      height: 200px;
-      border: 1px solid var(--stone);
-      background: var(--off-white);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: var(--warm-mid);
-    }
- 
-    .photo-placeholder span {
-      font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 0 1rem;
-    }
- 
-    .photo-placeholder svg {
-      width: 32px;
-      height: 32px;
-      stroke: var(--stone);
-      fill: none;
-      stroke-width: 1;
-    }
- 
-    .bio-text p {
-      font-size: 1.1rem;
-      font-weight: 300;
-      color: var(--warm-mid);
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
-    }
- 
-    .bio-text p:last-child { margin-bottom: 0; }
- 
-    /* Affiliation */
-    .affiliation {
-      font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
- 
-    /* Research interests */
-    .interests {
-      margin-top: 3rem;
-    }
- 
-    .interests h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: 1.5rem;
-      letter-spacing: 0.01em;
-      margin-bottom: 1rem;
-      color: var(--ink);
-    }
- 
-    .interests ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
- 
-    .interests li {
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
+    .bio p {
       font-size: 1rem;
       font-weight: 300;
       color: var(--warm-mid);
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
     }
+    .bio p:last-child { margin-bottom: 0; }
  
+    .interests { margin-top: 2.5rem; }
+    .interests h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      margin-bottom: 0.9rem;
+    }
+    .interests ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+    .interests li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--warm-mid);
+    }
     .interests li::before {
       content: '✦';
-      font-size: 0.5rem;
+      font-size: 0.45rem;
       color: var(--accent-lt);
       flex-shrink: 0;
       position: relative;
       top: -1px;
     }
- 
-    /* Links row */
-    .profile-links {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-    }
- 
-    .profile-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-      padding-bottom: 2px;
-      border-bottom: 1px solid var(--stone);
-      transition: color 0.2s, border-color 0.2s;
-    }
- 
-    .profile-links a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
- 
-    .profile-links svg {
-      width: 13px;
-      height: 13px;
-      fill: currentColor;
-      flex-shrink: 0;
-    }
- 
-    @media (max-width: 640px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .photo-placeholder, .profile-photo {
-        width: 140px;
-        height: 140px;
-      }
-    }
   </style>
 </head>
 <body>
+<div class="site-wrapper">
  
-  <div class="top-rule"></div>
+  <!-- ════════════ SIDEBAR ════════════ -->
+  <aside class="sidebar">
  
-  <nav>
-    <a class="nav-name" href="index.html"><em>Francesco</em> Carrer</a>
-    <ul class="nav-links">
+    <!-- Replace the placeholder below with your photo once you have it:
+         <img src="images/profile.jpg" alt="Francesco Carrer" class="sidebar-photo"> -->
+    <div class="sidebar-photo-placeholder">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>Add images/profile.jpg</span>
+    </div>
+ 
+    <div>
+      <div class="sidebar-name">
+        <em>Francesco</em>
+        Carrer
+      </div>
+      <div class="sidebar-role">
+        Senior Lecturer<br>Newcastle University
+      </div>
+    </div>
+ 
+    <ul class="sidebar-nav">
       <li><a href="index.html" class="active">About</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="spatial-analysis.html">Spatial Analysis</a></li>
     </ul>
-  </nav>
  
-  <main>
+    <ul class="sidebar-links">
+      <li>
+        <a href="https://github.com/francescokar" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href="mailto:your.email@ncl.ac.uk">
+          <!-- Replace with your actual email address -->
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank" rel="noopener">
+          <!-- Replace # with your Newcastle University staff page URL -->
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Newcastle University
+        </a>
+      </li>
+    </ul>
+ 
+  </aside>
+ 
+  <!-- ════════════ CONTENT ════════════ -->
+  <main class="content">
  
     <div class="slide-up delay-1">
       <p class="page-eyebrow">About</p>
       <h1 class="page-title"><em>Francesco</em> Carrer</h1>
-      <p class="affiliation">Senior Lecturer · Newcastle University</p>
     </div>
  
-    <div class="about-grid slide-up delay-2">
- 
-      <!-- Replace with <img src="images/profile.jpg" alt="Francesco Carrer" class="profile-photo"> once you have your photo -->
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-        <span>Add photo as images/profile.jpg</span>
-      </div>
- 
-      <div class="bio-text">
-        <p>
-          Holocenist. <!-- Add your bio here — a short paragraph about your research, fieldwork regions, approach, etc. -->
-        </p>
-        <p>
-          <!-- Second paragraph — e.g. current projects, grants, fieldwork -->
-        </p>
-        <p>
-          <!-- Third paragraph — e.g. background, previous positions, education -->
-        </p>
- 
-        <div class="profile-links">
-          <a href="https://github.com/francescokar" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-          <a href="mailto:your.email@ncl.ac.uk">
-            <!-- Replace with your actual email -->
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            Email
-          </a>
-          <a href="#" target="_blank" rel="noopener">
-            <!-- Replace # with your Newcastle University staff page URL -->
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-            Newcastle University
-          </a>
-        </div>
-      </div>
+    <div class="bio slide-up delay-2">
+      <p>I am an archaeologist. <!-- Add your bio here --></p>
+      <p><!-- Second paragraph — current projects, fieldwork, grants --></p>
+      <p><!-- Third paragraph — background, education, previous positions --></p>
     </div>
  
     <div class="interests slide-up delay-3">
@@ -230,20 +117,16 @@
       </div>
       <h2>Research Interests</h2>
       <ul>
-        <li><!-- Research interest 1 — e.g. Landscape and environmental archaeology --></li>
-        <li><!-- Research interest 2 — e.g. Spatial analysis and GIS in archaeology --></li>
-        <li><!-- Research interest 3 — e.g. Pastoralism and upland economies --></li>
-        <li><!-- Research interest 4 --></li>
+        <li><!-- e.g. Landscape and environmental archaeology --></li>
+        <li><!-- e.g. Spatial analysis and GIS --></li>
+        <li><!-- e.g. Pastoralism and upland economies --></li>
+        <li><!-- e.g. Add more as needed --></li>
       </ul>
     </div>
  
   </main>
  
-  <footer>
-    <span>Francesco Carrer &nbsp;·&nbsp; Newcastle University</span>
-    <a href="https://github.com/francescokar" target="_blank" rel="noopener">github.com/francescokar</a>
-  </footer>
- 
+</div>
 </body>
 </html>
- 
+  
