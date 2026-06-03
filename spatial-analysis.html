@@ -5,222 +5,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spatial Analysis — Francesco Carrer</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Rouge-compatible syntax highlighting via highlight.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/atelier-cave-light.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/r.min.js"></script>
   <script>hljs.highlightAll();</script>
-
   <style>
-    /* ── Spatial analysis page specific styles ── */
-
     .sa-intro {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 300;
       color: var(--warm-mid);
       line-height: 1.8;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
-
-    /* Analysis entry card */
-    .analysis-entry {
-      margin-bottom: 4rem;
-    }
-
-    .analysis-header {
-      margin-bottom: 1.5rem;
-    }
-
+ 
+    .analysis-entry { margin-bottom: 3.5rem; }
+ 
     .analysis-number {
       font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--accent-lt);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
-
+ 
     .analysis-title {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
-      font-size: 1.6rem;
-      letter-spacing: -0.01em;
+      font-size: 1.5rem;
       color: var(--ink);
       margin-bottom: 0.5rem;
     }
-
+ 
     .analysis-desc {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 300;
       color: var(--warm-mid);
       line-height: 1.7;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
-
-    /* Prose within an analysis */
+ 
     .analysis-body p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 300;
       color: var(--warm-mid);
       line-height: 1.8;
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
     }
-
+ 
     .analysis-body h3 {
       font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent);
-      margin: 1.5rem 0 0.75rem;
+      margin: 1.25rem 0 0.6rem;
     }
-
-    /* Code blocks */
+ 
     .analysis-body pre {
       background: var(--off-white);
       border: 1px solid var(--stone);
       border-left: 3px solid var(--accent-lt);
-      padding: 1.25rem 1.5rem;
+      padding: 1.1rem 1.25rem;
       overflow-x: auto;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.82rem;
+      margin: 0.75rem 0 1.25rem;
+      font-size: 0.8rem;
       line-height: 1.6;
     }
-
-    .analysis-body code {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.82rem;
-    }
-
-    /* Inline code */
+ 
+    .analysis-body code { font-family: 'Courier New', Courier, monospace; font-size: 0.8rem; }
     .analysis-body p code {
       background: var(--off-white);
       border: 1px solid var(--stone);
-      padding: 0.1em 0.4em;
-      font-size: 0.82rem;
+      padding: 0.1em 0.35em;
     }
-
-    /* Placeholder box */
+ 
     .placeholder-box {
       border: 1px dashed var(--stone);
-      padding: 2.5rem;
+      padding: 2rem;
       text-align: center;
-      color: var(--warm-mid);
     }
-
+    .placeholder-box .ph-glyph { font-size: 1.8rem; color: var(--stone); margin-bottom: 0.5rem; }
     .placeholder-box p {
       font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.6rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--stone);
-      margin-top: 0.5rem;
-    }
-
-    .placeholder-box .placeholder-glyph {
-      font-size: 2rem;
-      color: var(--stone);
-      line-height: 1;
-      margin-bottom: 0.75rem;
     }
   </style>
 </head>
 <body>
-
-  <div class="top-rule"></div>
-
-  <nav>
-    <a class="nav-name" href="index.html"><em>Francesco</em> Carrer</a>
-    <ul class="nav-links">
+<div class="site-wrapper">
+ 
+  <!-- ════════════ SIDEBAR ════════════ -->
+  <aside class="sidebar">
+ 
+    <div class="sidebar-photo-placeholder">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>Add images/profile.jpg</span>
+    </div>
+ 
+    <div>
+      <div class="sidebar-name">
+        <em>Francesco</em>
+        Carrer
+      </div>
+      <div class="sidebar-role">
+        Senior Lecturer<br>Newcastle University
+      </div>
+    </div>
+ 
+    <ul class="sidebar-nav">
       <li><a href="index.html">About</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="spatial-analysis.html" class="active">Spatial Analysis</a></li>
     </ul>
-  </nav>
-
-  <main>
-
+ 
+    <ul class="sidebar-links">
+      <li>
+        <a href="https://github.com/francescokar" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href="mailto:your.email@ncl.ac.uk">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Newcastle University
+        </a>
+      </li>
+    </ul>
+ 
+  </aside>
+ 
+  <!-- ════════════ CONTENT ════════════ -->
+  <main class="content">
+ 
     <div class="slide-up delay-1">
       <p class="page-eyebrow">Code &amp; Methods</p>
       <h1 class="page-title"><em>Spatial</em> Analysis</h1>
     </div>
-
+ 
     <p class="sa-intro slide-up delay-2">
-      R code and workflows used in my archaeological spatial analyses.
-      All code is shared openly — you are welcome to use and adapt it for your own research.
-      If you do, a citation to the relevant publication is appreciated.
+      R code and workflows from my archaeological spatial analyses, shared openly.
+      Feel free to use and adapt — a citation to the relevant publication is appreciated.
     </p>
-
+ 
     <div class="divider slide-up delay-2">
-      <div class="divider-line"></div>
-      <span class="divider-glyph">✦</span>
-      <div class="divider-line"></div>
+      <div class="divider-line"></div><span class="divider-glyph">✦</span><div class="divider-line"></div>
     </div>
-
-    <!-- ══════════════════════════════════════════
-         ANALYSIS ENTRY 1 — PLACEHOLDER
-         Replace this section with your R code.
-         Copy the entire <article> block for each
-         additional analysis.
-         ══════════════════════════════════════════ -->
+ 
+    <!-- ANALYSIS 01 — paste your first R code here -->
     <article class="analysis-entry slide-up delay-2">
-      <div class="analysis-header">
-        <p class="analysis-number">Analysis 01</p>
-        <h2 class="analysis-title">Your Analysis Title Here</h2>
-        <p class="analysis-desc">
-          A short description of what this analysis does — e.g. kernel density estimation
-          of site distributions across an upland landscape.
-        </p>
-      </div>
-
+      <p class="analysis-number">Analysis 01</p>
+      <h2 class="analysis-title">Your Analysis Title Here</h2>
+      <p class="analysis-desc">Short description of what this analysis does.</p>
       <div class="analysis-body">
-
-        <!-- Paste your R Markdown content here.
-             Use <h3> for section headers, <p> for prose,
-             and <pre><code class="language-r"> ... </code></pre> for code blocks. -->
-
         <div class="placeholder-box">
-          <div class="placeholder-glyph">⌨</div>
+          <div class="ph-glyph">⌨</div>
           <p>Paste your R code and narrative here</p>
         </div>
-
       </div>
     </article>
-
-    <!-- ══════════════════════════════════════════
-         ANALYSIS ENTRY 2 — PLACEHOLDER
-         ══════════════════════════════════════════ -->
+ 
     <div class="divider slide-up delay-3">
-      <div class="divider-line"></div>
-      <span class="divider-glyph">✦</span>
-      <div class="divider-line"></div>
+      <div class="divider-line"></div><span class="divider-glyph">✦</span><div class="divider-line"></div>
     </div>
-
+ 
+    <!-- ANALYSIS 02 — copy this block for each additional analysis -->
     <article class="analysis-entry slide-up delay-3">
-      <div class="analysis-header">
-        <p class="analysis-number">Analysis 02</p>
-        <h2 class="analysis-title">Your Second Analysis Here</h2>
-        <p class="analysis-desc">
-          Description of the second analysis.
-        </p>
-      </div>
-
+      <p class="analysis-number">Analysis 02</p>
+      <h2 class="analysis-title">Your Second Analysis Here</h2>
+      <p class="analysis-desc">Short description of what this analysis does.</p>
       <div class="analysis-body">
         <div class="placeholder-box">
-          <div class="placeholder-glyph">⌨</div>
+          <div class="ph-glyph">⌨</div>
           <p>Paste your R code and narrative here</p>
         </div>
       </div>
     </article>
-
-    <!-- Add more <article> blocks as needed, following the same pattern -->
-
+ 
   </main>
-
-  <footer>
-    <span>Francesco Carrer &nbsp;·&nbsp; Newcastle University</span>
-    <a href="https://github.com/francescokar" target="_blank" rel="noopener">github.com/francescokar</a>
-  </footer>
-
+ 
+</div>
 </body>
 </html>
+ 
