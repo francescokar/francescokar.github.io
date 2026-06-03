@@ -6,16 +6,13 @@
   <title>Publications — Francesco Carrer</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── Publications-page specific styles ── */
-
     .pub-intro {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 300;
       color: var(--warm-mid);
-      margin-bottom: 2.5rem;
       line-height: 1.8;
+      margin-bottom: 2.5rem;
     }
-
     .pub-intro a {
       color: var(--accent);
       text-decoration: none;
@@ -23,122 +20,131 @@
       transition: border-color 0.2s;
     }
     .pub-intro a:hover { border-color: var(--accent); }
-
-    /* Section headers */
-    .pub-section {
-      margin-top: 3rem;
-    }
-
+ 
+    .pub-section { margin-top: 2.5rem; }
+ 
     .pub-section-title {
       font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
+      padding-bottom: 0.6rem;
       border-bottom: 1px solid var(--stone);
+      margin-bottom: 1.5rem;
     }
-
-    /* Year groups */
-    .pub-year-group {
-      margin-bottom: 2rem;
-    }
-
+ 
+    .pub-year-group { margin-bottom: 1.75rem; }
+ 
     .pub-year {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: var(--accent-lt);
-      margin-bottom: 0.75rem;
       font-weight: 300;
+      margin-bottom: 0.6rem;
     }
-
-    /* Individual publication */
-    .pub-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
+ 
+    .pub-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+ 
     .pub-item {
-      padding-left: 1.25rem;
+      padding-left: 1rem;
       border-left: 2px solid var(--stone);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 300;
       line-height: 1.75;
       color: var(--ink);
       transition: border-color 0.2s;
     }
-
-    .pub-item:hover {
-      border-color: var(--accent-lt);
-    }
-
-    .pub-item .pub-authors {
-      color: var(--warm-mid);
-    }
-
-    .pub-item .pub-title {
-      font-style: italic;
-    }
-
-    .pub-item .pub-journal {
-      color: var(--warm-mid);
-    }
-
-    .pub-item a.pub-doi {
+    .pub-item:hover { border-color: var(--accent-lt); }
+    .pub-item .pub-authors { color: var(--warm-mid); }
+    .pub-item .pub-title   { font-style: italic; }
+    .pub-item .pub-journal { color: var(--warm-mid); }
+ 
+    a.pub-doi {
       font-family: 'Tenor Sans', sans-serif;
-      font-size: 0.62rem;
+      font-size: 0.58rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
       text-decoration: none;
       border-bottom: 1px solid var(--accent-lt);
-      margin-left: 0.5rem;
+      margin-left: 0.4rem;
       transition: border-color 0.2s;
     }
-    .pub-item a.pub-doi:hover { border-color: var(--accent); }
+    a.pub-doi:hover { border-color: var(--accent); }
   </style>
 </head>
 <body>
-
-  <div class="top-rule"></div>
-
-  <nav>
-    <a class="nav-name" href="index.html"><em>Francesco</em> Carrer</a>
-    <ul class="nav-links">
+<div class="site-wrapper">
+ 
+  <!-- ════════════ SIDEBAR ════════════ -->
+  <aside class="sidebar">
+ 
+    <div class="sidebar-photo-placeholder">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>Add images/profile.jpg</span>
+    </div>
+ 
+    <div>
+      <div class="sidebar-name">
+        <em>Francesco</em>
+        Carrer
+      </div>
+      <div class="sidebar-role">
+        Senior Lecturer<br>Newcastle University
+      </div>
+    </div>
+ 
+    <ul class="sidebar-nav">
       <li><a href="index.html">About</a></li>
       <li><a href="publications.html" class="active">Publications</a></li>
       <li><a href="spatial-analysis.html">Spatial Analysis</a></li>
     </ul>
-  </nav>
-
-  <main>
-
+ 
+    <ul class="sidebar-links">
+      <li>
+        <a href="https://github.com/francescokar" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href="mailto:your.email@ncl.ac.uk">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Newcastle University
+        </a>
+      </li>
+    </ul>
+ 
+  </aside>
+ 
+  <!-- ════════════ CONTENT ════════════ -->
+  <main class="content">
+ 
     <div class="slide-up delay-1">
       <p class="page-eyebrow">Research Output</p>
       <h1 class="page-title"><em>Publications</em></h1>
     </div>
-
+ 
     <p class="pub-intro slide-up delay-2">
-      A selection of publications is listed below, organised by type and year.
-      For a complete and up-to-date list see my profiles on
+      A selection of publications organised by type and year.
+      For a complete list see my profiles on
       <a href="#" target="_blank">Google Scholar</a>,
       <a href="#" target="_blank">ORCID</a>, and
       <a href="#" target="_blank">ResearchGate</a>.
-      <!-- Replace # with your actual profile URLs -->
     </p>
-
-    <!-- ══════════════════════════════════════════
-         JOURNAL ARTICLES
-         To add a publication, copy one <li> block
-         and fill in your details.
-         ══════════════════════════════════════════ -->
+ 
+    <!-- JOURNAL ARTICLES -->
     <section class="pub-section slide-up delay-2">
       <h2 class="pub-section-title">Journal Articles</h2>
-
+ 
       <div class="pub-year-group">
         <p class="pub-year">2024</p>
         <ul class="pub-list">
@@ -148,10 +154,10 @@
             <span class="pub-journal">Journal Name</span>, Vol(Issue): pages.
             <a class="pub-doi" href="https://doi.org/XXXXX" target="_blank">DOI ↗</a>
           </li>
-          <!-- Copy the <li> above for each article in this year -->
+          <!-- Copy the <li> above for each article -->
         </ul>
       </div>
-
+ 
       <div class="pub-year-group">
         <p class="pub-year">2023</p>
         <ul class="pub-list">
@@ -163,23 +169,16 @@
           </li>
         </ul>
       </div>
-
       <!-- Add more year groups as needed -->
-
     </section>
-
+ 
     <div class="divider slide-up delay-3">
-      <div class="divider-line"></div>
-      <span class="divider-glyph">✦</span>
-      <div class="divider-line"></div>
+      <div class="divider-line"></div><span class="divider-glyph">✦</span><div class="divider-line"></div>
     </div>
-
-    <!-- ══════════════════════════════════════════
-         BOOK CHAPTERS
-         ══════════════════════════════════════════ -->
+ 
+    <!-- BOOK CHAPTERS -->
     <section class="pub-section slide-up delay-3">
       <h2 class="pub-section-title">Book Chapters</h2>
-
       <div class="pub-year-group">
         <p class="pub-year">2023</p>
         <ul class="pub-list">
@@ -190,40 +189,29 @@
           </li>
         </ul>
       </div>
-
     </section>
-
+ 
     <div class="divider slide-up delay-3">
-      <div class="divider-line"></div>
-      <span class="divider-glyph">✦</span>
-      <div class="divider-line"></div>
+      <div class="divider-line"></div><span class="divider-glyph">✦</span><div class="divider-line"></div>
     </div>
-
-    <!-- ══════════════════════════════════════════
-         BOOKS
-         ══════════════════════════════════════════ -->
+ 
+    <!-- BOOKS -->
     <section class="pub-section slide-up delay-4">
       <h2 class="pub-section-title">Books</h2>
-
       <div class="pub-year-group">
         <p class="pub-year">2022</p>
         <ul class="pub-list">
           <li class="pub-item">
             <span class="pub-authors">Carrer, F.</span>
-            <span class="pub-title">Book title here</span>.
-            Publisher.
+            <span class="pub-title">Book title here</span>. Publisher.
           </li>
         </ul>
       </div>
-
     </section>
-
+ 
   </main>
-
-  <footer>
-    <span>Francesco Carrer &nbsp;·&nbsp; Newcastle University</span>
-    <a href="https://github.com/francescokar" target="_blank" rel="noopener">github.com/francescokar</a>
-  </footer>
-
+ 
+</div>
 </body>
 </html>
+ 
