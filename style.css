@@ -1,23 +1,24 @@
 /* =====================================================
    Francesco Carrer — Shared Stylesheet
    ===================================================== */
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&display=swap');
-
+ 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 :root {
-  --white:     #ffffff;
-  --off-white: #f7f4ef;
-  --stone:     #e8e2d9;
-  --ink:       #1a1714;
-  --warm-mid:  #7a6e63;
-  --accent:    #8b6f47;
-  --accent-lt: #c4a882;
+  --white:      #ffffff;
+  --off-white:  #f7f4ef;
+  --stone:      #e8e2d9;
+  --ink:        #1a1714;
+  --warm-mid:   #7a6e63;
+  --accent:     #8b6f47;
+  --accent-lt:  #c4a882;
+  --sidebar-w:  260px;
 }
-
+ 
 html { scroll-behavior: smooth; }
-
+ 
 body {
   background: var(--white);
   color: var(--ink);
@@ -28,151 +29,266 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* ── Top rule ── */
-.top-rule {
+ 
+/* ══════════════════════════════════════════
+   SITE LAYOUT — sidebar + content
+   ══════════════════════════════════════════ */
+ 
+.site-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+}
+ 
+/* ── Sidebar ── */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  border-right: 1px solid var(--stone);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+ 
+/* Top accent line on sidebar */
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, var(--white) 0%, var(--accent) 30%, var(--ink) 60%, var(--white) 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--ink) 60%, var(--stone) 100%);
 }
-
-/* ── Navigation ── */
-nav {
-  padding: 1.4rem 3rem;
+ 
+/* Profile photo */
+.sidebar-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid var(--stone);
+  display: block;
+}
+ 
+.sidebar-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--stone);
+  background: var(--off-white);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--stone);
+  justify-content: center;
+  gap: 0.4rem;
 }
-
-.nav-name {
+ 
+.sidebar-photo-placeholder svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--stone);
+  fill: none;
+  stroke-width: 1;
+}
+ 
+.sidebar-photo-placeholder span {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-align: center;
+  padding: 0 0.5rem;
+}
+ 
+/* Name & title */
+.sidebar-name {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   color: var(--ink);
-  text-decoration: none;
 }
-
-.nav-name em {
+ 
+.sidebar-name em {
   font-style: italic;
   color: var(--warm-mid);
+  display: block;
 }
-
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-.nav-links a {
+ 
+.sidebar-role {
   font-family: 'Tenor Sans', sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+ 
+/* Navigation links */
+.sidebar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid var(--stone);
+  padding-top: 1.5rem;
+}
+ 
+.sidebar-nav a {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--warm-mid);
   text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.3rem 0;
+  border-left: 2px solid transparent;
+  padding-left: 0.6rem;
   transition: color 0.2s, border-color 0.2s;
 }
-
-.nav-links a:hover,
-.nav-links a.active {
+ 
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
   color: var(--accent);
   border-color: var(--accent);
 }
-
-/* ── Main content ── */
-main {
-  flex: 1;
-  padding: 4rem 3rem;
-  max-width: 860px;
-  margin: 0 auto;
-  width: 100%;
+ 
+/* Contact/profile links */
+.sidebar-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid var(--stone);
+  padding-top: 1.5rem;
+  margin-top: auto;
 }
-
-/* ── Page headings ── */
+ 
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+ 
+.sidebar-links a:hover { color: var(--accent); }
+ 
+.sidebar-links svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+ 
+/* ── Main content area ── */
+.content {
+  flex: 1;
+  padding: 3.5rem 4rem;
+  max-width: 760px;
+  overflow-y: auto;
+}
+ 
+/* ══════════════════════════════════════════
+   SHARED CONTENT STYLES
+   ══════════════════════════════════════════ */
+ 
 .page-eyebrow {
   font-family: 'Tenor Sans', sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
-
+ 
 .page-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1;
   letter-spacing: -0.02em;
   margin-bottom: 2rem;
 }
-
+ 
 .page-title em {
   font-style: italic;
   color: var(--warm-mid);
 }
-
-/* ── Divider ── */
+ 
+/* Divider */
 .divider {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin: 2rem 0;
 }
-.divider-line { height: 1px; background: var(--stone); flex: 1; }
-.divider-glyph { font-size: 1rem; color: var(--accent-lt); line-height: 1; }
-
-/* ── Footer ── */
-footer {
-  padding: 1.5rem 3rem;
-  border-top: 1px solid var(--stone);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Tenor Sans', sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--stone);
-}
-
-footer a {
-  color: var(--stone);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-footer a:hover { color: var(--accent); }
-
-/* ── Animations ── */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.9s ease forwards;
-}
+.divider-line  { height: 1px; background: var(--stone); flex: 1; }
+.divider-glyph { font-size: 0.9rem; color: var(--accent-lt); line-height: 1; }
+ 
+/* Animations */
 .slide-up {
   opacity: 0;
   animation: slideUp 0.9s ease forwards;
 }
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.45s; }
-.delay-4 { animation-delay: 0.6s; }
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+ 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-/* ── Responsive ── */
-@media (max-width: 640px) {
-  nav { padding: 1rem 1.5rem; flex-direction: column; gap: 1rem; }
-  main { padding: 2.5rem 1.5rem; }
-  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-  .nav-links { gap: 1.5rem; }
+ 
+/* ══════════════════════════════════════════
+   RESPONSIVE — stack on mobile
+   ══════════════════════════════════════════ */
+@media (max-width: 700px) {
+  .site-wrapper { flex-direction: column; }
+ 
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--stone);
+  }
+ 
+  .sidebar-photo,
+  .sidebar-photo-placeholder { width: 64px; height: 64px; }
+ 
+  .sidebar-nav,
+  .sidebar-links {
+    border-top: none;
+    padding-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0;
+  }
+ 
+  .sidebar-nav a { border-left: none; padding-left: 0; border-bottom: 1px solid transparent; }
+ 
+  .content { padding: 2rem 1.5rem; }
 }
+ 
